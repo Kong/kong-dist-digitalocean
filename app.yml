@@ -10,7 +10,6 @@ config:
     - httpie
     - jq
     - libpcre3
-    - lua5.1
     - netcat
     - openssl
   runcmd:
