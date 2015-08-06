@@ -12,7 +12,6 @@ config:
     - netcat
     - openssl
   runcmd:
-    - cd ~
     - git clone git://github.com/mashape/kong-dist-digitalocean
     - cd kong-dist-digitalocean
     - bash install.sh
