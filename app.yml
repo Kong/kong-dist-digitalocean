@@ -12,5 +12,5 @@ config:
   runcmd:
     - cd /root
     - wget http://downloadkong.org/trusty_all.deb
-    - dpkg -i kong-$LATEST.trusty_all.deb
+    - dpkg -i kong-*.trusty_all.deb
     - kong start
