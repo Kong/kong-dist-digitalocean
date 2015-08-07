@@ -11,6 +11,6 @@ config:
     - wget
   runcmd:
     - cd /root
-    - wget http://downloadkong.org/trusty_all.deb
-    - dpkg -i kong-*.trusty_all.deb
+    - wget http://downloadkong.org/trusty_all.deb -O kong.deb
+    - dpkg -i kong.deb
     - kong start
