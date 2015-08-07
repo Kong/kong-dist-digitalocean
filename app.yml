@@ -3,18 +3,14 @@ image: cassandra
 min_size: 1gb
 config:
   #cloud-config
-  package_update: true
   packages:
     - dnsmasq
-    - git
-    - httpie
-    - jq
     - libpcre3
     - netcat
     - openssl
+    - wget
   runcmd:
     - cd /root
-    - git clone git://github.com/mashape/kong-dist-digitalocean
-    - cd kong-dist-digitalocean
-    - bash install.sh
+    - wget http://downloadkong.org/trusty_all.deb
+    - dpkg -i kong-$LATEST.trusty_all.deb
     - kong start
